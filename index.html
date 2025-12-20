@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hey I am Poornima</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background-color:#ffe6f0;
+    text-align:center;
+    font-family:system-ui, sans-serif;
+    color:#6b3b4f;
+}
+
+/* NAVBAR */
+.navbar{
+    background-color:#ff6fae;
+    padding:12px 20px;
+    text-align:left;
+}
+
+#menu-toggle{display:none;}
+
+.hamburger{
+    font-size:26px;
+    color:white;
+    cursor:pointer;
+    display:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-right:20px;
+    font-weight:bold;
+}
+
+/* MOBILE NAV */
+@media(max-width:600px){
+    .hamburger{display:block}
+
+    .nav-links{display:none;margin-top:10px;}
+
+    #menu-toggle:checked + .hamburger + .nav-links{
+        display:block;
+    }
+
+    .nav-links a{
+        display:block;
+        margin:10px 0;
+    }
+}
+
+/* HEADER */
+header{
+    background-color:#ffb6d5;
+    padding:40px 20px;
+}
+
+h1{
+    font-family:'Playfair Display SC', serif;
+    color:#5a2a3c;
+    letter-spacing:2px;
+}
+
+h2{
+    color:#5a2a3c;
+    margin-bottom:10px;
+}
+
+/* SECTIONS */
+section{
+    background-color:#fff0f7;
+    margin:20px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 2px 8px rgba(90,42,60,0.1);
+}
+
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    padding:12px 22px;
+    background-color:#ff6fae;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background-color:#ff4d94;
+}
+
+/* DROPDOWN — FILE STYLE */
+details{
+    background-color:#ffe6f0;
+    margin:15px 0;
+    padding:15px 18px;
+    border-radius:12px;
+    text-align:left;
+    cursor:pointer;
+    transition:background-color 0.3s ease;
+    box-shadow:0 2px 6px rgba(90,42,60,0.08);
+}
+
+details:hover{
+    background-color:#ffd6ea;
+}
+
+summary{
+    font-weight:bold;
+    color:#5a2a3c;
+    font-size:1.1rem;
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    align-items:center;
+}
+
+summary::-webkit-details-marker{display:none;}
+
+summary::before{
+    content:"▶";
+    margin-right:10px;
+    transition:transform 0.3s ease;
+    color:#ff6fae;
+}
+
+details[open] summary::before{
+    transform:rotate(90deg);
+}
+
+details p{
+    margin-top:10px;
+    padding-left:24px;
+    line-height:1.6;
+}
+
+/* PROJECT CARDS */
+.card-container{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.card{
+    min-width:260px;
+    background:#ffe6f0;
+    padding:15px;
+    border-radius:15px;
+    text-align:left;
+    box-shadow:0 2px 6px rgba(90,42,60,0.1);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+    margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+    background-color:#ffb6d5;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">☰</label>
+
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Links</a>
+    </div>
+</nav>
+
+<header>
+    <h1>Hey, I am <span style="color:white">Poornima M</span></h1>
+    <p>Cybersecurity enthusiast | Developer | Multitasking</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a cybersecurity student with an IBM-recognized certification,
+        passionate about both security and web development.
+    </p>
+    <a href="#skills" class="btn">Know my skills</a>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <details>
+        <summary>Cybersecurity</summary>
+        <p>I have certificates from Cisco and IBM,
+            as proof of my dedication. I am  
+            well versed in vulnerability management, 
+            endpoint security, scanning, digital forensics,
+            and various other sectors of Blue Teaming.</p>
+    </details>
+
+    <details>
+        <summary>Programming</summary>
+        <p>Proficient in CLI based Python with strong HTML and CSS 
+            for web development.
+            I leverage code to build tools that
+            enhance security posture, and eye-catching websites.</p>
+    </details>
+
+    <details>
+        <summary>Linux</summary>
+        <p>Deep familiarity with Ubuntu and Linux environments.
+            From command-line operations to system administration, I'm comfortable navigating the terminal, 
+            managing processes, and utilizing Linux 
+            as my primary toolkit for security operations.</p>
+    </details>
+</section>
+
+<section id="project">
+    <h2>Projects</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Password Strength Checker</h3>
+            <img src="https://raw.githubusercontent.com/Poornima-M07/Password-Strength-Checker-/refs/heads/main/IMG_20251219_081732.jpg">
+            <p>A CLI based program that checks the strength of your password
+        according to the recommended conditions. ,</p>
+        </div>
+
+        <div class="card">
+            <h3>Caesar Cryptographer</h3>
+            <img src="https://raw.githubusercontent.com/Poornima-M07/Caesar_Cipher/refs/heads/main/IMG_20251219_132535.jpg">
+            <p>A python basedCLI program that encrypts or decrypts your data
+              in Caesar Script with your choice of shift, making the data secure.</p>
+        </div>
+
+        <div class="card">
+            <h3>Book Recommender</h3>
+            <img src="https://raw.githubusercontent.com/Poornima-M07/Book-Recommender-/refs/heads/main/IMG_20251219_082600.jpg">
+            <p> A CLI program that recommends what book you can read
+              next, favoring your age and genre of interest.</p>
+        </div>
+    </div>
+    <h3>For more of my projects, check out my<a href="https://github.com/Poornima-M07" class= btn>Github!</a></h3>
+    
+</section>
+<section id="contact">
+    <h2>Links</h2>
+
+    <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/poornima-m-123065391" target="_blank">
+            <img src="https://img.icons8.com/?size=50&id=447&format=png&color=000000" alt="LinkedIn">
+        </a>
+        
+
+        <a href="https://github.com/Poornima-M07" target="_blank">
+            <img src="https://img.icons8.com/?size=50&id=12598&format=png&color=000000" alt="GitHub">
+        </a>
+
+        <a href="https://www.credly.com/users/poornima-m.7b0a0178" target="_blank">
+            <img src="https://img.icons8.com/?size=50&id=KsOg6vnZeCKX&format=png&color=000000" alt="Credly">
+        </a>
+    </div>
+</section>
+<footer>
+    <p>© Poornima M</p>
+</footer>
+
+</body>
+</html>
+
+
+  
