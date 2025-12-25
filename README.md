@@ -2,7 +2,9 @@
 
 
 *This is my personal portfolio website, and also my first ever front-end project.*
-What does it do?
+
+
+# What does it do?
 
 
  *It is a website that introduces me, showcases my skills,*
@@ -11,7 +13,7 @@ What does it do?
 
 *so you can check me out there too.*
 
-What is it made of?
+# What is it made of?
 
 
 *Purely HTML and CSS.*
