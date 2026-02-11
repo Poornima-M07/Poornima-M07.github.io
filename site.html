@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hey I am Poornima</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Poppins:wght@400;500&family=Lora:wght@400&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#fff5f9;
+    text-align:center;
+    font-family:'Poppins', sans-serif;
+    color:#5a2a3c;
+}
+
+/* NAVBAR */
+.navbar{
+    background-color:#e75494;
+    padding:14px 20px;
+    text-align:left;
+}
+
+#menu-toggle{display:none;}
+
+.hamburger{
+    font-size:26px;
+    color:white;
+    cursor:pointer;
+    display:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-right:20px;
+    font-weight:500;
+}
+@media(max-width:600px){
+    .hamburger{display:block}
+    .nav-links{display:none;margin-top:10px;}
+    #menu-toggle:checked + .hamburger + .nav-links{
+        display:block;
+    }
+    .nav-links a{
+        display:block;
+        margin:10px 0;
+    }
+}
+
+/* HEADER */
+header{
+    background-color:#f8b4d9;
+    padding:50px 20px;
+}
+
+h1{
+    font-family:'Playfair Display SC', serif;
+    color:#4a1f30;
+    letter-spacing:2px;
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+/* SECTIONS */
+section{
+    background-color:white;
+    margin:30px auto;
+    padding:35px 25px;
+    border-radius:20px;
+    max-width:1000px;
+    box-shadow:0 6px 18px rgba(90,42,60,0.08);
+}
+
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    background-color:#e75494;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    background-color:#d63c7d;
+}
+
+/* DETAILS */
+details{
+    background-color:#fff0f6;
+    margin:15px 0;
+    padding:15px 18px;
+    border-radius:12px;
+    text-align:left;
+    box-shadow:0 2px 6px rgba(90,42,60,0.06);
+}
+
+summary{
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* PROJECT GRID */
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-top:25px;
+}
+
+.card{
+    background:#fff0f6;
+    padding:20px;
+    border-radius:16px;
+    text-align:left;
+    transition:0.3s ease;
+    box-shadow:0 4px 12px rgba(90,42,60,0.08);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+    margin:12px 0;
+}
+
+/* TEXT MUSE */
+.text-muse{
+    background:#f6efe7;
+    padding:30px;
+    border-radius:16px;
+    margin-top:30px;
+}
+
+.text-muse h3{
+    font-family:'Playfair Display SC', serif;
+    margin-bottom:10px;
+}
+
+.idea-box{
+    background:#f3e9dd;
+    padding:20px;
+    border-radius:14px;
+    min-height:60px;
+    margin:15px 0;
+    font-family:'Lora', serif;
+}
+
+.text-btn{
+    background:#e6d3b1;
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background-color:#f8b4d9;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">☰</label>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Links</a>
+    </div>
+</nav>
+
+<header>
+    <h1>Hey, I am <span style="color:white">Poornima M</span></h1>
+    <p>Cybersecurity Enthusiast | Developer | Multitasking</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a cybersecurity student with an IBM-recognized certification,
+        passionate about both security and web development.
+    </p>
+    <br>
+    <a href="#skills" class="btn">Know my skills</a>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <details>
+        <summary>Cybersecurity</summary>
+        <p>I hold certifications from Cisco and IBM. Skilled in vulnerability management, endpoint security, scanning, digital forensics, and blue teaming operations.</p>
+    </details>
+
+    <details>
+        <summary>Programming</summary>
+        <p>Proficient in CLI-based Python with strong HTML & CSS for web development. I build tools that enhance security posture and create elegant websites.</p>
+    </details>
+
+    <details>
+        <summary>Linux</summary>
+        <p>Comfortable in Ubuntu and Linux environments. Experienced with terminal navigation, process management, and system-level security tasks.</p>
+    </details>
+</section>
+
+<section id="project">
+    <h2>Projects</h2>
+  
+  
+    <div class="text-muse">
+        <h3>Text Muse</h3>
+        <h4>Text Muse is a small space made for quiet inspiration.
+Click, pause, and let a simple prompt spark a new thought, sketch, or story.
+There is no right or wrong way to create here. Just gentle ideas to get you started.</h4>
+  
+        <div class="idea-box" id="idea">
+            Click below for an art idea
+        </div>
+
+        <button class="text-btn" onclick="generateIdea()">Generate</button>
+    </div>
+  
+  
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Password Strength Checker</h3>
+            <img src="https://raw.githubusercontent.com/Poornima-M07/Password-Strength-Checker-/refs/heads/main/IMG_20251219_081732.jpg">
+            <p>A CLI program that evaluates password strength based on security best practices.</p>
+        </div>
+
+        <div class="card">
+            <h3>Caesar Cryptographer</h3>
+            <img src="https://raw.githubusercontent.com/Poornima-M07/Caesar_Cipher/refs/heads/main/IMG_20251219_132535.jpg">
+            <p>A Python CLI tool that encrypts and decrypts text using customizable Caesar cipher shifts.</p>
+        </div>
+
+        <div class="card">
+            <h3>Book Recommender</h3>
+            <img src="https://raw.githubusercontent.com/Poornima-M07/Book-Recommender-/refs/heads/main/IMG_20251219_082600.jpg">
+            <p>A CLI program that recommends books based on age and genre preference.</p>
+        </div>
+    </div>
+
+    <br>
+    <a href="https://github.com/Poornima-M07" class="btn">View More on GitHub</a>
+
+   
+
+</section>
+
+<section id="contact">
+    <h2>Links</h2>
+    <a href="https://www.linkedin.com/in/poornima-m-123065391" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/Poornima-M07" target="_blank">GitHub</a> |
+    <a href="https://www.credly.com/users/poornima-m.7b0a0178" target="_blank">Credly</a>
+</section>
+
+<footer>
+    <p>© Poornima M</p>
+</footer>
+
+<script>
+const ideas = [
+"A girl sitting by a window during golden hour",
+"A cozy cafe on a rainy afternoon",
+"A dreamy character surrounded by floating flowers",
+"An old bookshop hidden in a narrow street",
+"A soft portrait using only warm tones",
+"A teacup filled with tiny galaxies",
+"A peaceful forest spirit resting",
+"A bedroom lit only by fairy lights",
+"Clouds shaped like animals at sunset",
+"A self-portrait using abstract shapes",
+"A girl with a dress made of flowers",
+"A girl journalling in sunset",
+"A tuxedo wearing capybara",
+"What peace would look like as a place",
+"Your favourite color as a person",
+"A girl dancing under a street lamp"
+];
+
+function generateIdea() {
+    const randomIdea = ideas[Math.floor(Math.random() * ideas.length)];
+    document.getElementById("idea").textContent = randomIdea;
+}
+</script>
+
+</body>
+</html>
